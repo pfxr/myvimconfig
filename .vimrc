@@ -42,3 +42,4 @@ let g:gruvbox_contrast = 'hard'
 "Key Mapping
 map <F3> 
 map <F2> 
+map <F4> s
