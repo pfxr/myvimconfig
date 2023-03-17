@@ -62,3 +62,9 @@ map <F6> UpdateTags()
 
 "Clang format auto-detect file
 let g:clang_format#detect_style_file=1
+
+set clipboard=unnamedplus
+
+" Copy Paste to clipboard
+vnoremap <C-c> "+y
+
