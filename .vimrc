@@ -5,6 +5,9 @@ function UpdateTags()
         silent cscope reset
         TlistUpdate
 endfunction
+"Allow .vimrc to be loaded from the current directory
+set exrc
+set secure
 
 
 "Vundle related
@@ -62,3 +65,16 @@ map <F6> UpdateTags()
 
 "Clang format auto-detect file
 let g:clang_format#detect_style_file=1
+" Copy paste to systems clipboard
+set clipboard=unnamedplus
+
+" GDB
+packadd termdebug
+let g:termdebug_popup = 0
+let g:termdebug_wide = 163
+map <F6> :Termdebug<CR>
+map <F7> :Step<CR>
+map <F8> :Over<CR>
+map <F9> :Finish<CR>
+map <F10> :Continue<CR>
+map <F11> :Stop<CR>
