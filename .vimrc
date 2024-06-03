@@ -5,6 +5,9 @@ function UpdateTags()
         silent cscope reset
         TlistUpdate
 endfunction
+"Allow .vimrc to be loaded from the current directory
+set exrc
+set secure
 
 
 "Vundle related
@@ -44,9 +47,12 @@ set mouse=a
 set cursorline
 
 set nowrap
+
+"Colorscheme settings
 colorscheme gruvbox
 set background=dark
-let g:gruvbox_contrast = 'hard'
+"let g:gruvbox_contrast = 'hard'
+syntax enable
 
 
 "Key Mapping
@@ -68,3 +74,13 @@ set clipboard=unnamedplus
 " Copy Paste to clipboard
 vnoremap <C-c> "+y
 
+" GDB
+packadd termdebug
+let g:termdebug_popup = 0
+let g:termdebug_wide = 163
+map <F6> :Termdebug<CR>
+map <F7> :Step<CR>
+map <F8> :Over<CR>
+map <F9> :Finish<CR>
+map <F10> :Continue<CR>
+map <F11> :Stop<CR>
