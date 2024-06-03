@@ -68,8 +68,11 @@ map <F6> UpdateTags()
 
 "Clang format auto-detect file
 let g:clang_format#detect_style_file=1
-" Copy paste to systems clipboard
+
 set clipboard=unnamedplus
+
+" Copy Paste to clipboard
+vnoremap <C-c> "+y
 
 " GDB
 packadd termdebug
