@@ -47,9 +47,12 @@ set mouse=a
 set cursorline
 
 set nowrap
+
+"Colorscheme settings
 colorscheme gruvbox
 set background=dark
-let g:gruvbox_contrast = 'hard'
+"let g:gruvbox_contrast = 'hard'
+syntax enable
 
 
 "Key Mapping
